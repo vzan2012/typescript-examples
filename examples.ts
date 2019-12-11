@@ -43,19 +43,31 @@ console.log(`Example of Functions:`);
 console.log(addNums(10, 20));
 
 let addNums1 = (num1: any, num2: number): number => {
-    if(typeof num1 == 'string') {
-        if(isNaN(parseInt(num1))) {
+    if (typeof num1 == 'string') {
+        if (isNaN(parseInt(num1))) {
             return 0;
         }
         num1 = parseInt(num1);
     }
     return num1 + num2;
 }
-console.log(addNums1('10',20));
+console.log(addNums1('10', 20));
 
 
 
 // Default Arguments 
 console.log(`Example of Default Arguments:`);
-let areaofEllipse = (r1: number, r2:number = r1) => Math.PI * r1 * r2;
+let areaofEllipse = (r1: number, r2: number = r1) => Math.PI * r1 * r2;
 console.log(areaofEllipse(2));
+
+
+
+// Optional Arguments 
+console.log(`Example of Optional Arguments:`);
+let areaOfSquare = (side: number, isInteger?: boolean) => {
+    if (isInteger) {
+        return Math.floor(side * side);
+    }
+    return side * side;
+}
+console.log(areaOfSquare(2.5,false));

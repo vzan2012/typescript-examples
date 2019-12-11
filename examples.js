@@ -47,3 +47,12 @@ var areaofEllipse = function (r1, r2) {
     return Math.PI * r1 * r2;
 };
 console.log(areaofEllipse(2));
+// Optional Arguments 
+console.log("Example of Optional Arguments:");
+var areaOfSquare = function (side, isInteger) {
+    if (isInteger) {
+        return Math.floor(side * side);
+    }
+    return side * side;
+};
+console.log(areaOfSquare(2.5, false));
