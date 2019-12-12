@@ -38,3 +38,25 @@ interface Citizen {
 
 let personObj: Citizen = { name: 'zan', SSN: 786 };
 personObj.name = 'Username';
+
+
+
+// Classes - Examples
+class website {
+    url: string;
+    facebookLikes: number;
+
+    constructor(url: string, fbLikes: number) {
+        this.url = url;
+        this.facebookLikes = fbLikes;
+    }
+
+    likesInK(): string {
+        return (this.facebookLikes / 1000) + 'K';
+    }
+}
+
+let google = new website('http://google.com', 123456);
+// google.url = 'http://google.com';
+// google.facebookLikes = 123456;
+console.log(google.likesInK());
